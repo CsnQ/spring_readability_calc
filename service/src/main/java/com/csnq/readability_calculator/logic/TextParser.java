@@ -22,7 +22,6 @@ public class TextParser {
 
     public double getSentencesInText(){
         String cleanedText = TextCleaner.removeCarriageReturns(this.textToParse);
-
         String sentences[] = this.textToParse.split("\\.");
         System.out.println(Arrays.toString(sentences));
         double result = sentences.length;

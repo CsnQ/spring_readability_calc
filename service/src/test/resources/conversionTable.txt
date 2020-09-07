@@ -1,0 +1,10 @@
+Index Score,School Level,Comprehension
+5 & below, 5th Grade and below,Very easy to read
+6,6th Grade,Easy to read
+7,7th Grade,Fairly easy to read
+7-10, 8th, 9th & 10th Grade,	Conversational English
+11-12, 11th & 12th Grade, Fairly difficult to read
+13-16, College, Difficult to read
+17+,	Professional,	Extremely difficult to read
+
+source: https://www.textcompare.org/readability/coleman-liau-index#Grade-Conversion
