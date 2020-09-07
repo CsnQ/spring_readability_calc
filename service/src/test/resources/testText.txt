@@ -1,0 +1,3 @@
+This is a file containing text so we can see that our app will read and process this information correctly.
+This is a new line.
+This is the end of the file.
