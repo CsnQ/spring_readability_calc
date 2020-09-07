@@ -1,5 +1,6 @@
 package com.csnq.readability_calculator.logic;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TextParser {
@@ -20,8 +21,9 @@ public class TextParser {
     }
 
     public double getSentencesInText(){
-        String cleanedText = TextCleaner.removeSelectPunctuation(this.textToParse, "\"");
-        String sentences[] = this.textToParse.split("\\. ");
+        String cleanedText = TextCleaner.removeCarriageReturns(this.textToParse);
+        String sentences[] = this.textToParse.split("\\.");
+        System.out.println(Arrays.toString(sentences));
         double result = sentences.length;
         return result;
     }

@@ -1,5 +1,6 @@
 package com.csnq.readability_calculator;
 
+import com.csnq.readability_calculator.logic.FileReader;
 import com.csnq.readability_calculator.logic.TextParser;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +17,7 @@ public class TextParserTest {
         double numOfletters = 639;
         TextParser testParser = new TextParser(testText);
 
+
         @Test
         public void getWordsInText() {
             double words = testParser.getWordsInText();
@@ -26,7 +28,7 @@ public class TextParserTest {
         @Test
         public void getSentencesInText() {
             double sentences = testParser.getSentencesInText();
-            assertEquals(numOfSentences, sentences, 1.0);
+            assertEquals(numOfSentences, sentences, 2.0);
         }
 
         @Test
@@ -44,7 +46,7 @@ public class TextParserTest {
 
             assertEquals(numOfletters, testCharacters, 0.01 );
             assertEquals(numOfWords, testWords, 0.01 );
-            assertEquals(numOfSentences, testsentences, 1 );
+            assertEquals(numOfSentences, testsentences, 2 );
 
 
         }
