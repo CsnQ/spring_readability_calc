@@ -20,4 +20,12 @@ public class FileReaderTest {
         assertTrue(text.contains("This is the end of the file."));
 
     }
+
+    @Test
+    public void readTestArticle () throws IOException{
+        FileReader fd = new FileReader();
+        String text = fd.readTextFile("src/test/resources/testArticle.txt");
+        assertTrue(text.contains("Galton came close to an equaliser against the run of play when her header hit the bar late in the first half."));
+
+    }
 }

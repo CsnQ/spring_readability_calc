@@ -12,4 +12,9 @@ public class TextCalcController {
         return "Hello, World";
     }
 
+    @RequestMapping("/parse")
+    public @ResponseBody String level(){
+        return "this is where text will be parsed";
+
+    }
 }
