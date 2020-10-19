@@ -30,7 +30,7 @@ public class TextCalcController {
     }
 
     @RequestMapping(value = "/parse/leveljson", method = RequestMethod.POST)
-    public @ResponseBody String textLevel (@RequestBody String text) {
-        return TextProcesser.printText(text);
+    public @ResponseBody String textLevel (@RequestBody String text) throws IOException {
+        return TextProcesser.getTextLevelFromJSON(text);
     }
 }
