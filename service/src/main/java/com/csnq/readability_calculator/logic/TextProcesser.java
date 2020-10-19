@@ -1,5 +1,7 @@
 package com.csnq.readability_calculator.logic;
 
+import com.csnq.readability_calculator.dataTypes.SampleText;
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -20,6 +22,18 @@ public class TextProcesser {
         ReadabilityCalc calc = new ReadabilityCalc();
         Double level = calc.calculateReadability(textMetaData.get("characters"), textMetaData.get("words"), textMetaData.get("sentences"));
         return (calc.getGradeLevel(level));
+    }
+
+    public static String getTextLevelFromJSON(String text) throws IOException{
+        TextParser parser = new TextParser(text);
+        HashMap<String, Double> textMetaData = parser.getTextMetaData();
+        ReadabilityCalc calc = new ReadabilityCalc();
+        Double level = calc.calculateReadability(textMetaData.get("characters"), textMetaData.get("words"), textMetaData.get("sentences"));
+        return (calc.getGradeLevel(level));
+    }
+
+    public static String printText(String text){
+        return text;
     }
 
 }
